@@ -1,0 +1,2140 @@
+
+/* я вообще ничего непоняла про эти вендорные префиксы я их и так и так а все равно мне валидатор выдает кучу предупреждений. а я уже боюсь что-то убирать а то еще и работать перестанет. короче, все оставила, что было. работает потому что*/
+*{
+  box-sizing:border-box;
+}
+
+html, body {
+  
+  height: 100%;
+  margin:0;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+main {
+  flex: 1;
+}
+header {
+  min-height: 70px; 
+  background:url(../img/headeruzor.jpg);
+  box-shadow:1px 1px 5px black, 0 0 3px black;
+}
+.subheader{
+    min-height:100px;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-right:30px;
+
+}
+.members{
+  width:250px;
+}
+.main_logo  {
+  width:300px;
+     
+}  
+.contacts{
+color:white;
+font-size:10px;
+text-align:center;
+}
+nav {
+    width: 100%; 
+    min-height: 60px;
+    background-color:  rgba(0, 0, 0, 0.5);
+    z-index: 2; 
+}
+
+.menu {
+    display: flex;
+    justify-content:flex-end;
+    padding: 13px 15px;
+    margin: 0;
+    list-style-type: none;
+    
+}
+.menu .menu_link {
+    color: white;
+    font-size: 15px;
+    font-weight: 300;
+    text-decoration: none;
+    text-transform: uppercase;
+    
+}
+.menu .menu_link:hover{
+    color:#DDA0DD;
+    text-shadow:  1px 0 10px white;
+}
+
+.menu .menu_item {
+    text-transform: none;
+    padding-right: 30px;
+    padding-top: 10px;
+}
+.subheader_call {
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: 300;
+    margin-top: 19px;
+    text-align: right;
+}
+
+.subheader_phone {
+    display: block;
+    margin-top: 8px;
+    color: #ffffff;
+    font-size: 10px;
+    font-weight: 400;
+    text-transform: uppercase;
+    text-align: right;
+    line-height: 12px;
+}
+.hamburger{
+  display:none;
+}
+@media(max-width:880px){
+  .main_logo{
+    padding-right: 20px;
+  }
+  .members{
+    width: 220px;
+  }
+  .phone_number{
+    font-size:14px;
+  }
+  .menu{
+    justify-content:center;
+  }
+  .menu .menu_item {
+    padding-right:30px;
+    padding-left:30px;
+}
+}
+@media(max-width:880px){
+  
+  .menu .menu_item {
+    padding-right:20px;
+    padding-left:20px;
+}
+}
+@media(max-width:830px){
+  
+.menu .menu_item {
+  padding-right:10px;
+  padding-left:10px;
+}
+.main_logo{
+  width:260px;
+  padding-left:20px;
+}
+.members{
+  width:180px;
+}
+}
+@media(max-width:700px){
+
+.subheader{
+  flex-direction: column;
+  padding:10px;
+}  
+.members{
+  width:280px;
+  padding-right:35px;
+ 
+} 
+.main_logo{
+  width:300px;
+  padding-bottom:10px;
+}
+.phone_number{
+  font-size: 20px;
+}
+
+.hamburger{
+  display:block;
+  position:absolute;
+  top:10px;
+  left:20px;
+  color:white;
+  font-size:30px;
+}
+.hamburger_active{
+  transform: rotate(-90deg);
+}
+
+.menu{
+  flex-direction:column;
+  z-index:15; 
+  position:absolute;
+  top:60px;
+  left:-100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  transition: 0.6s all;
+  border:1px solid white;
+  width:100%;
+  align-items: center;
+}
+.menu_active{
+  left:0;
+}
+.menu .menu_item {
+  padding-bottom:17px;
+}
+}
+  
+
+
+  
+
+/* главный блок с картинкой */
+
+.choose{
+  height:30px;
+  width:132px;
+}
+.datepicker{
+  height:30px;
+  width:200px;
+  padding-left:3px;
+}
+.hotel_star{
+  color:white;
+}
+.fa-star{
+  color:grey;
+}
+.date{
+  padding-top:10px;
+}
+.country_tour{
+  height:30px;
+  width:200px;
+}
+.master_tour{
+  background-color:rgba(0, 0, 0, 0.5);
+  z-index:3;
+  position:absolute;
+  border-radius:10px;
+  padding:30px 30px;
+  border:1px solid white;
+  top:50%;
+  left:50%;
+  transform:translate(-50%, -50%);
+  box-shadow: 0 0 10px rgba(0,6,0.9,0.9);
+ 
+}
+.main_image{
+  position:relative;
+  box-shadow:1px 1px 5px black, 0 0 3px black;
+}
+.check{
+  color:white;
+}
+.pick_hotel{
+  color:white;
+  text-align: center;
+  padding-bottom:15px;
+  
+}
+.quantity{
+  padding-top:10px;
+}
+.food{
+  padding-top:10px;
+}
+
+.hotel{
+  color:white;
+}
+.check{
+  padding-top:10px;
+  padding-left:10px;
+}
+.button_search{
+  padding-top: 15px;
+}
+.btn-search{
+    width:150px;
+    height:40px;
+    color:#fff;
+    background-color:black;
+    display: block;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 0px;
+    line-height:10px;
+    
+  }
+  .btn-search:hover{
+    background: -webkit-gradient(linear, left top, left bottom, from(black), color-stop(purple), to(grey)); background: -o-linear-gradient(black, purple, grey); 
+    background: linear-gradient(black, purple, grey);
+  }
+  .btn-search:focus {
+    outline:none;
+}
+.btn-search:active{
+  background:-webkit-gradient(linear, left top, left bottom, from(purple), color-stop(grey), to(purple));background:-o-linear-gradient(purple, grey, purple);
+  background:linear-gradient(purple, grey, purple);
+}
+.btn_search:hover {
+      transform: translateX(-200px);
+    }
+ 
+/* главный слайдер */
+.big_slider{
+  position:relative;
+  margin:10px;
+  width:200px;
+  box-shadow:1px 1px 5px black, 0 0 3px black;
+  
+}
+.big_slider:focus{
+  outline:none;
+}
+.big_text{
+  position:absolute;
+  bottom:0;
+  background-color:  rgba(0, 0, 0, 0.5);
+  color:white;
+  width:100%;
+  text-align: center;
+  text-shadow:1px 1px 2px black, 0 0 3px white;
+  font-size:20px;
+  padding:3px;
+}
+.left{
+  border:none;
+  width:40px;
+  height:40px;
+  position:absolute;
+  left:10px;
+  top:50%;
+  border-radius:100%;
+  border:1px solid grey;
+  z-index:7;
+  box-shadow:1px 1px 5px black, 0 0 3px black;
+  
+}
+.right{
+  border:none;
+  width:40px;
+  height:40px;
+  position:absolute;
+  right:10px;
+  top:50%;
+  border-radius:100%;
+  border:1px solid grey;
+  z-index:7;
+  box-shadow:1px 1px 5px black, 0 0 3px black;
+  
+  
+}
+.left:focus, .right:focus{
+outline:none;
+}
+.left:hover, .right:hover{
+  background-color:white;
+}
+.left:hover, .right:active{
+  background-color:	grey;
+}
+  
+.slider{
+    width:100%;
+    margin-top:10px;
+    position:relative;
+}
+.carousel__inner{
+    width:100%;
+    box-shadow:1px 1px 5px black, 0 0 3px black;
+}
+@media(max-width:660px){
+.big_text{
+  font-size:15px;
+}
+}
+@media(max-width:500px){
+  .slider_h3, .big_slider_p{
+    margin:5px;
+  }
+  .big_text{
+    font-size:10px;
+  }
+  }
+  @media(max-width:400px){
+    .right{
+      width:30px;
+      height:30px;
+    }
+    .left{
+      width:30px;
+      height:30px;
+    }
+    .big_text{
+      font-size:10px;
+    }
+  
+  }
+/* Стили для авиаслайдеров */
+
+.clients, .aircompany{
+  width:100%;
+  margin:20px auto;
+  box-shadow:1px 1px 5px black, 0 0 3px black;
+ 
+  
+}
+
+.pull-left{
+  border:none;
+  width:40px;
+  height:40px;
+  position:absolute;
+  left:10px;
+  z-index:3;
+  bottom:50px;
+  border-radius:100%;
+  border:1px solid grey;
+  box-shadow:1px 1px 5px black, 0 0 3px black;
+}
+.pull-left:focus, .pull-right:focus{
+  outline:none;
+}
+.pull-left:hover, .pull-right:hover{
+  background-color:white;
+}
+.pull-left:hover, .pull-right:active{
+  background-color:grey;
+}
+.pull-right{
+  border:none;
+  width:40px;
+  height:40px;
+  position:absolute;
+  right:20px;
+  bottom:50px;
+  border-radius:100%;
+  border:1px solid grey;
+  box-shadow:1px 1px 5px black, 0 0 3px black;
+  
+}
+.carousel__aircompany{
+  position:relative;
+}  
+.client_logo{
+  padding:20px;
+  width:130px;
+  border-left:1px solid grey;
+ 
+}
+.client_logo:focus{
+  outline:none;
+}
+.avia_dept{
+  display:flex;
+  margin-top:20px;
+  padding:30px;
+}
+.avia{
+  text-align: center;
+  margin-top:20px;
+  margin-bottom:20px;
+}
+ol{
+  list-style-type:circle;
+  padding:20px 50px;
+  line-height:25px;
+}
+.main_services, .for_clients{
+  font-weight: bold;
+  list-style-type: none;
+}
+.preveleges, .services{
+background-color:rgba(0, 0, 0, 0.1);
+box-shadow:1px 1px 5px black, 0 0 3px black;
+margin:5px;
+}
+.avia_people{
+  box-shadow:1px 1px 5px black, 0 0 3px black;
+  display:flex;
+  justify-content: space-evenly;
+  margin-top:40px;
+  padding-top:20px;
+  background-color:rgba(0, 0, 0, 0.1);
+}
+.lena, .marina, .olga{
+  width: 150px;
+}
+.avia_person{
+  text-align: center;
+  font-weight: bold;
+  box-shadow:1px 1px 5px black, 0 0 3px black;
+  
+}
+.contact_avia{
+  text-align: center;
+}
+.what_to_buy{
+  text-align: center;
+}
+.for_clients, .main_services{
+  text-align:center;
+}
+@media (max-width: 860px) {
+.avia_dept{
+  flex-direction: column;
+}
+.services{
+  margin-bottom:20px;
+}
+
+}
+@media (max-width: 500px) {
+  .lena, .marina, .olga{
+    width: 130px;
+  }
+  
+  .what_to_buy{
+    padding:10px;
+  }
+
+  }
+  @media (max-width: 450px) {
+    .lena, .marina, .olga{
+      width: 110px;
+    }
+    p.avia_person{
+     padding:10px; 
+      
+    }
+    }
+    @media (max-width: 380px) {
+      .lena, .marina, .olga{
+        width:85px;
+      }
+      p.avia_person{
+       padding:5px;   
+      }
+      ol{
+        list-style-type:circle;
+        padding-top:20px;
+        line-height:20px;
+      }
+      .client_logo{
+        width:80px;
+      } 
+      .pull-left{
+        border:none;
+        width:25px;
+        height:25px;
+        position:absolute;
+        left:10px;
+        z-index:3;
+        bottom:25px;
+        border-radius:100%;
+        border:1px solid grey;
+        box-shadow:1px 1px 5px black, 0 0 3px black;
+      }
+      
+      .pull-right{
+        border:none;
+        width:25px;
+        height:25px;
+        position:absolute;
+        right:20px;
+        bottom:25px;
+        border-radius:100%;
+        border:1px solid grey;
+        box-shadow:1px 1px 5px black, 0 0 3px black;
+        
+      } 
+      }
+    
+
+/* Стили для второго слайдера */
+.left_2{
+  border:none;
+  width:40px;
+  height:40px;
+  position:absolute;
+  left:10px;
+  top:50%;
+  border-radius:100%;
+  border:1px solid grey;
+  z-index:7;
+  box-shadow:1px 1px 5px black, 0 0 3px black;
+  
+}
+.left_2:focus, .right_2:focus{
+  outline:none;
+}
+.left_2:hover, .right_2:hover{
+  background-color:white;
+}
+.left_2:hover, .right_2:active{
+background-color:	grey;
+}
+.right_2{
+  border:none;
+  width:40px;
+  height:40px;
+  position:absolute;
+  right:10px;
+  top:50%;
+  border-radius:100%;
+  border:1px solid grey;
+  z-index:7;
+  box-shadow:1px 1px 5px black, 0 0 3px black;
+}
+.news{
+  width:100%;
+  padding:10px;
+}
+
+.offers{
+  text-align: center;
+  padding:10px;
+}
+
+.news_block{
+  position:relative;
+  margin:20px 10px;
+  width:176px;
+  box-shadow:1px 1px 5px black, 0 0 3px black;
+  
+}
+.news_block:focus{
+  outline:none;
+}
+.slider_text{
+  position:absolute;
+  bottom:0;
+  background-color:  rgba(0, 0, 0, 0.5);
+  color:white;
+  width:100%;
+  text-align: center;
+  text-shadow:1px 1px 2px black, 0 0 3px white;
+  font-size:13px;
+  padding:3px;
+}
+
+img{
+    display:block;
+    margin:0 auto;
+    width:100%;
+}
+h2{
+    margin:0;
+}
+@media(max-width:500px){
+  .news_block{
+    position:relative;
+    margin:20px 5px;
+    width:120px;
+    box-shadow:1px 1px 5px black, 0 0 3px black;
+    
+  }
+  .slider_descr{
+    display:none;
+  }
+  .right_2{
+    width:30px;
+    height:30px; 
+  }
+  .left_2{
+    width:30px;
+    height:30px; 
+  }
+}
+
+/* Стили для футера */
+footer{
+    margin-top:auto;
+    padding:20px;
+    background:url(../img/headeruzor.jpg);
+}
+ .footer_minsk, .footer_brest{
+  color:white;
+  font-size:10px;
+  padding:15px;
+  width:200px;
+  
+}
+.footer_vat{
+  color:white;
+  font-size:10px;
+  padding:15px 25px 15px;
+  width:200px;
+}
+
+.footer_paragraphs{
+  margin:2px;
+}
+.fa-instagram-square, .fa-facebook, .fa-telegram-plane{
+  font-size:40px;
+  padding:5px;
+  color:white;
+}
+.fa-instagram-square:hover{
+  color:plum;
+}
+ .fa-facebook:hover{
+  color:plum;
+}
+.fa-telegram-plane:hover{
+  color:plum;
+}
+
+
+.search:hover{
+  background-color:plum;
+}
+.search:focus{
+  outline:none;
+}
+
+
+
+.info{
+  display:flex;
+  justify-content:space-evenly;
+  
+  
+}
+.pageup{
+  display:none;
+  position:fixed;
+  width:40px;
+  height:40px;
+  color:grey;
+  right:40px;
+  bottom:40px;
+  font-size:50px;
+  z-index:20;
+}
+.pageup:hover{
+  color:#DDA0DD; 
+}
+
+.payment{
+  display:flex;
+  flex-direction: row;
+  justify-content:space-evenly;
+  background:url(../img/uzor.jpg);
+  color:white;
+  align-items:flex-start;
+  padding:20px;
+  
+}
+.all_payment_info{
+  box-shadow:1px 1px 5px black, 0 0 3px black;
+}
+ul{
+  list-style-type: none;
+  margin:0;
+}
+@media(max-width:700px){
+  .payment{
+    flex-direction:column-reverse;
+    justify-content:center;
+    align-items:center;
+  }
+  .footer_p, .p_media{
+    text-align:center;
+  }
+  .footer_vat{
+    padding:15px;
+  }
+}
+@media(max-width:400px){
+  .info{
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+  }
+  .footer_minsk, .footer_brest, .footer_vat{
+    padding: 15px 50px;
+  }
+
+}
+
+/* Стили для секции страны */
+  .list-col {
+    min-height:400px;
+    background:url(../img/map.jpg);
+    padding-bottom:20px;
+}
+
+.nl{
+    margin-top:20px;
+    text-align: center;
+    color: rgba(148, 142, 142, 1);
+    text-decoration:none;
+}
+
+ul.list-col, ul.list-col li {
+list-style: none; 
+padding-top:30px; 
+margin:6px;  
+color:grey;
+
+}
+ul.list-col {
+ column-width: 150px;  
+  color:grey;
+}
+
+ul.list-col li {
+padding:0 0 5px 0; 
+line-height: 16px; 
+font-size:14px; 
+color:#333333;
+}
+
+ul.list-col li a { 
+  display:block; 
+  line-height: 16px; 
+  font-size:16px; 
+  font-weight:bold; 
+  text-decoration:none; 
+  color:#333333;
+}
+ul.list-col li a:hover { 
+  
+  color:red;
+}
+
+@media (max-width: 370px) {
+  ul.list-col, ul.list-col li {
+    text-align:center;
+    padding:0;
+  }
+  ul.list-col, ul.list-col li:last-child {
+    padding-bottom:20px;
+  }
+ 
+}
+
+  
+/* Стили для формы регистрации */
+.contact_agency{
+  text-align:center;
+} 
+.agency{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-bottom:20px;
+}
+.for_agency{
+  text-align: center;
+}
+.agency_info{
+  padding:20px;
+  text-align:center;
+}
+.form_agency{
+    align-self:center;
+    background-color:rgba(0, 0, 0, 0.3);
+    width:380px;
+    height:460px;
+    border-radius:10px;
+    border:2px solid black;
+    margin-top:20px;
+}
+ .sign_up{
+     background:url(../img/depositphotos_25005259-stock-photo-black-grunge-background.jpg);
+     color:white;
+     text-align: center;
+     border-radius: 8px 8px 0 0;
+     padding:15px;
+     margin:0;
+     font-weight: normal;
+     text-shadow:1px 1px 2px black, 0 0 20px grey;
+ }
+ .subscribe{ 
+      color:#fff;
+      line-height: 30px;
+      border: 0px;
+      text-align: center;
+      width: 160px;
+      border-radius:16px;
+      background:transparent;
+      background: -webkit-gradient(linear, left top, left bottom, from(grey), color-stop(grey), to(grey));
+      background: -o-linear-gradient(grey, grey, grey);
+      background: linear-gradient(grey, grey, grey);
+      -moz-box-shadow: inset 0 0 7px rgba(0,0,0,0.5);
+      -webkit-box-shadow: inset 0 0 7px rgba(0,0,0,0.5);
+      -o-box-shadow: inset 0 0 7px rgba(0,0,0,0.5);
+      box-shadow: inset 0 0 7px rgba(0,0,0,0.5);
+      display: block;
+      text-decoration: none;
+      font-size: 20px;
+      padding: 0px;
+      margin:20px auto;
+  }
+  .download{
+    color:#fff;
+      line-height: 40px;
+      border: 0px;
+      text-align: center;
+      width: 300px;
+      border-radius:16px;
+      background:transparent;
+      background: -webkit-gradient(linear, left top, left bottom, from(grey), color-stop(grey), to(grey));
+      background: -o-linear-gradient(grey, grey, grey);
+      background: linear-gradient(grey, grey, grey);
+      -moz-box-shadow: inset 0 0 7px rgba(0,0,0,0.5);
+      -webkit-box-shadow: inset 0 0 7px rgba(0,0,0,0.5);
+      -o-box-shadow: inset 0 0 7px rgba(0,0,0,0.5);
+      box-shadow: inset 0 0 7px rgba(0,0,0,0.5);
+      display: block;
+      text-decoration: none;
+      font-size: 20px;
+      padding: 0px;
+      margin:30px auto;
+  } 
+  .subscribe::before{
+      content: ".";
+      color:transparent;
+      line-height: 16px;
+      width: 150px;
+      margin-top: 0px;
+      margin-bottom: -17px;
+      margin-left: 5px;
+      background:-webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.9)), to(rgba(255, 255, 255, 0.1)) );
+      background:-o-linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.1) );
+      background:linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.1) );
+      border-radius:16px; 
+      display:block;
+  }
+  .download::before{
+    content: ".";
+    color:transparent;
+    line-height: 16px;
+    width: 290px;
+    margin-top: 0px;
+    margin-bottom: -17px;
+    margin-left: 5px;
+    background:-webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.9)), to(rgba(255, 255, 255, 0.1)) );
+    background:-o-linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.1) );
+    background:linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.1) );
+    border-radius:16px; 
+    display:block;
+
+  }
+  .error{
+    color: red;
+    border:1px solid red;
+    }
+    label.error{
+      border:none;
+      
+    }
+  .subscribe:focus {
+      outline:none;
+  }
+  .download:focus{
+    outline:none;
+  }
+  .download:hover{
+    background: -webkit-gradient(linear, left top, left bottom, from(black), color-stop(black), to(grey)); background: -o-linear-gradient(black, black, grey); background: linear-gradient(black, black, grey);
+  }
+  .download:active{
+    background: -webkit-linear-gradient(grey, black, grey);
+  }
+  .subscribe:hover{
+    background: -webkit-gradient(linear, left top, left bottom, from(grey), color-stop(black), to(grey)); background: -o-linear-gradient(grey, black, grey); background: linear-gradient(grey, black, grey);
+  }
+  .subsctibe:active{
+    background: -webkit-gradient(linear, left top, left bottom, from(white), color-stop(black), to(grey));background: -o-linear-gradient(white, black, grey);background: linear-gradient(white, black, grey);
+  }
+
+  .form-group{
+      margin-top:20px;
+      margin-left:30px;
+  }
+  input[name="name"],input[name="email"], input[name="company"], input[name="name_two"] {
+      width:315px;
+      height:32px;
+      margin-top:3px;  
+  }
+ 
+  .label_name,  .label_surname, .label_e-mail{
+      color:  #2C3539; 
+      font-weight: bold;   
+  }
+  
+  input:focus {
+      outline-color: black;
+  
+  }
+  @media (max-width: 440px) {
+    .form_agency{
+      width:340px;
+      
+      
+  }
+  input[name="name"],input[name="email"], input[name="company"] {
+    width:280px;
+    height:32px;
+    margin-top:3px;  
+}
+  }
+  @media (max-width: 360px) {
+    .form_agency{
+      width:300px;
+      
+      
+  }
+  input[name="name"],input[name="email"], input[name="company"] {
+    width:240px;
+   
+}
+  }
+  @media (max-width: 320px) {
+    .form_agency{
+      width:280px;
+      
+      
+  }
+  input[name="name"],input[name="email"], input[name="company"] {
+    width:210px;   
+}
+.download{
+    width: 280px;
+    font-size: 18px;
+    
+} 
+  }
+  
+
+ /* Стили для страницы с контактами */
+.all_info{
+  display:flex;
+  justify-content:space-evenly;
+  align-items:baseline;
+  
+  margin:20px;
+  
+
+} 
+.icon{
+  font-size:50px;
+  color:grey;
+  text-align:center;
+  
+}
+.phone_number{
+  color:white;
+  font-size:19px;
+  
+}
+.contact_info{
+  margin:6px;
+  text-align:center;
+}
+
+.address{
+  margin-top:20px;
+  margin-bottom:20px;
+}
+.our_contacts{
+  margin-top:20px; 
+  margin-bottom:20px;
+}
+.bank{
+  margin:30px auto;
+  width:50%;
+  padding:10px;
+ 
+}
+.bolder{
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 17px;
+  color:grey;
+  text-align:center;
+  box-shadow:1px 1px 5px black, 0 0 3px black;
+  background-color:white;
+  
+}
+.white{
+  text-shadow:1px 1px 2px black, 0 0 1em white;
+}
+span{
+  font-weight: bold;
+}
+iframe{
+  width:90%;
+  display:block;
+  margin:20px auto;
+  height:400px;
+  box-shadow:1px 1px 5px black, 0 0 3px black;
+}
+.where{
+  text-align:center;
+}
+@media (max-width: 640px) {
+  .bolder{
+   
+    font-size: 15px;
+    color:grey;  
+  }
+  .all_info{
+    flex-direction:column;
+  }
+  .address{
+    align-self: center;
+  }
+  .our_contacts{
+    align-self: center;
+  }
+  .where{
+    margin-left:0;
+    padding-left:0;
+  }
+}
+@media (max-width: 540px) {
+  .icon{
+    font-size:40px;
+  }
+  .bank{
+    width:90%;
+  }
+}
+
+/* Стили для модального окна*/
+
+.modal {
+  z-index:102;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(1.1);
+  transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+}
+.form_order {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  width: 384px;
+  border-radius: 10px;
+}
+.close-button {
+  right:200px;
+  float: right;
+  width: 40px;
+  line-height:25px;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 10px;
+  background-color: lightgray;
+}
+.close-button:hover {
+  background-color: darkgray;
+}
+.show-modal {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1.0);
+  transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+}
+.form_order{
+    z-index:101;
+    background-color:white;
+    width:420px;
+    height:360px;
+    border-radius:10px;
+    margin-top:20px;
+    margin-left:20px;
+    margin-bottom:20px;
+    border:2px solid black;
+  }
+.order{
+  color:black;
+  text-align: center;
+  font-size:20px;
+}  
+.footer_nav{
+  background-color:black;
+}
+.menu_list_footer{
+  display:flex;
+  justify-content:center;
+}
+
+.place_order{
+  padding-bottom:10px;
+}
+.hide{
+  display:none;
+}
+.call_now{
+  margin:0;
+  padding-top:12px;
+  font-size:18px;
+}
+
+.call_me_now{
+  border-top:2px solid grey;
+  border-left:2px solid grey;
+  margin-top:29px;
+  width:220px;
+  height:40px;
+  color:#fff;
+  background-color:black;
+  display: block;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 0px;
+  line-height:10px;
+}
+.call_me_now:hover{
+  background: -webkit-gradient(linear, left top, left bottom, from(black), color-stop(black), to(grey));background: -o-linear-gradient(black, black, grey);background: linear-gradient(black, black, grey);
+}
+.call_me_now:active{
+  background: -webkit-gradient(linear, left top, left bottom, from(grey), color-stop(purple), to(grey));background: -o-linear-gradient(grey, purple, grey);background: linear-gradient(grey, purple, grey);
+}
+.trigger {
+  
+    width:220px;
+    height:40px;
+    color:#fff;
+    background-color:black;
+    display: block;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 0px;
+    line-height:10px;
+    
+  }
+  .trigger:hover{
+    background: -webkit-gradient(linear, left top, left bottom, from(black), color-stop(black), to(grey)); background: -o-linear-gradient(black, black, grey); background: linear-gradient(black, black, grey);
+  }
+  .trigger:focus {
+    outline:none;
+}
+.trigger:active{
+  background: -webkit-gradient(linear, left top, left bottom, from(grey), color-stop(purple), to(grey));background: -o-linear-gradient(grey, purple, grey);background: linear-gradient(grey, purple, grey);
+}
+@media(max-width:880px){
+  .trigger {
+    width:160px;
+    
+  }
+}
+@media(max-width:700px){
+  .trigger {
+    width:280px;
+  }
+}
+@media(max-width:480px){
+  .hide{
+    display:block;
+  }
+  .hide_two{
+    display:none;
+  }
+}
+
+
+input[name="number"] {
+  width:315px;
+  height:32px;
+  margin-top:3px;  
+}
+.send{
+  color:#fff;
+      line-height: 30px;
+      border: 0px;
+      text-align: center;
+      width: 160px;
+      border-radius:16px;
+      background:transparent;
+      background: -webkit-gradient(linear, left top, left bottom, from(grey), color-stop(grey), to(grey)); background: -o-linear-gradient(grey, grey, grey); background: linear-gradient(grey, grey, grey);
+      -moz-box-shadow: inset 0 0 7px rgba(0,0,0,0.5);
+      -webkit-box-shadow: inset 0 0 7px rgba(0,0,0,0.5);
+      -o-box-shadow: inset 0 0 7px rgba(0,0,0,0.5);
+      box-shadow: inset 0 0 7px rgba(0,0,0,0.5);
+      display: block;
+      text-decoration: none;
+      font-size: 20px;
+      padding: 0px;
+      margin:20px auto;
+}
+.send::before{
+      content: ".";
+      color:transparent;
+      line-height: 16px;
+      width: 150px;
+      margin-top: 0px;
+      margin-bottom: -17px;
+      margin-left: 5px;
+      background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.9)), to(rgba(255, 255, 255, 0.1)) );background: -o-linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.1) );background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.1) );
+      border-radius:16px; 
+      display:block;
+}
+.send:focus{
+    outline:none;
+  }
+.send:hover{
+    background-image: -webkit-linear-gradient(black, black, grey);
+  }
+  @media (max-width: 540px) {
+   .form_order{
+     width:340px;
+     height:380px;
+   } 
+   input[name="number"], input[name="name_two"] {
+    width:250px;
+    
+  }
+  }
+  @media (max-width: 440px) {
+    .form_order{
+      width:280px;
+      height:340px;
+    } 
+    input[name="number"], input[name="name_two"] {
+     width:186px;
+   }
+   .order{
+     font-size:15px;
+   }
+   .close-button {
+    right:200px;
+    float: right;
+    width: 40px;
+    line-height:17px;
+    
+    
+  }
+   }
+
+/* стили для галлерии со странами */
+.view_all_countries, .view_all_tours{
+  box-shadow:1px 1px 5px black, 0 0 3px black;
+  padding:20px;
+}
+.gallery_countries {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 5px;
+  justify-items: center;
+  margin-bottom:10px;
+  
+}
+.gallery_img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  transition: opacity 0.25s ease-in-out;
+  box-shadow:1px 1px 5px black, 0 0 3px black;
+  
+}
+
+.gallery_img:hover {
+  opacity: .7;
+}
+.country{
+  padding: 10px;
+  text-align: center;
+  background-color:rgba(0, 0, 0, 0.2);
+  color:white;
+  box-shadow:1px 1px 5px black, 0 0 3px black;
+  text-shadow:1px 1px 2px black, 0 0 1px grey;
+}
+@media(max-width:600px){
+  .gallery_countries {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 5px;
+    justify-items: center;
+    margin-bottom:10px;
+    
+  }
+  
+}
+
+/* Стили для страницы о нас */
+.team_gallery{
+  margin: 20px 40px;
+  color: black;
+}
+
+.our_team {
+  font-size: 30px;
+  color: black;
+  text-align:center;
+}
+
+.team{
+  display: flex;
+  justify-content: space-around;
+  margin: 20px 80px;
+}
+
+.profile{
+  flex-basis: 260px;
+}
+.profile_img {
+  height: 360px;
+  width: 270px; 
+  box-shadow:1px 1px 5px black, 0 0 3px black;
+  transition: opacity 0.25s ease-in-out;
+  
+}
+.profile_img:hover{
+  opacity: .7;
+}
+.user-name {
+  margin-top: 30px;
+  font-size: 35px;
+  text-align:center;
+}
+
+.position {
+  font-size: 18px;
+  font-weight: 100;
+  letter-spacing: 3px;
+  color: black;
+  text-align: center;
+}
+
+.member_cont {
+  font-size: 16px;
+  margin-top: 20px;
+  text-align: center;
+}
+
+@media (max-width: 1200px) {
+  .profile_img {
+    height: 320px;
+    width: 240px;
+    margin:0 20px;
+  }
+  .user-name {
+    margin-top: 30px;
+    font-size: 30px;
+  }
+  
+  .position {
+    font-size: 18px;
+    font-weight: 100;
+    letter-spacing: 3px;
+    color: black;
+  }
+  
+  .member_cont {
+    font-size: 16px;
+    margin-top: 20px;
+  }
+}
+@media (max-width: 990px) {
+  .profile_img {
+    height: 300px;
+    width: 220px;
+  }
+  
+}
+
+@media (max-width: 800px) {
+  .team {
+    flex-direction: column;
+  }
+
+  .profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .profile_img {
+    height: 440px;
+    width: 300px;
+  }
+
+  .member_cont {
+    text-align: center;
+    margin: 20px 60px 80px 60px;
+    font-size: 20px;
+  }
+}
+
+/* страница с mice */
+.mice_h2{
+  margin-top:20px;
+}
+
+object{
+  width:750px;
+  height:470px;
+}
+.presentation{
+  display:flex;
+  justify-content:center;
+  margin-bottom:20px;
+}
+.mice_h2{
+  text-align:center;
+}
+.mice_text{
+  padding:20px;
+}
+.mice_services, .mice_list{
+list-style-type: circle;
+ width:80%;
+ line-height:24px;
+ box-shadow:1px 1px 5px black, 0 0 3px black;
+ background-color:rgba(0, 0, 0, 0.1);
+ margin:0 auto;
+ padding-bottom:20px;
+}
+.mice_people{
+  display:flex;
+  justify-content: space-evenly;
+  margin-top:40px;
+  background-color:rgba(0, 0, 0, 0.1);
+  padding-top:20px;
+  box-shadow:1px 1px 5px black, 0 0 3px black;
+}
+.mice_bold{
+  font-weight:bold;
+  text-align:center;
+  list-style-type: none;
+}
+
+.alina, .alesya, .katya{
+  width: 150px;
+  
+}
+.mice_person{
+  text-align: center;
+  font-weight: bold;
+  box-shadow:1px 1px 5px black, 0 0 3px black;
+}
+.mice_contacts{
+  text-align:center;
+}
+@media (max-width: 780px) {
+  object{
+    width:680px;
+  }
+
+  .mice_services, .mice_list{
+     padding:40px;
+    } 
+}
+@media (max-width: 700px) {
+  object{
+    display:none;
+   
+  }
+}
+@media (max-width: 500px) {
+  .alina, .alesya, .katya{
+    width: 130px;
+  }
+}
+@media (max-width: 450px) {
+  .alina, .alesya, .katya{
+    width: 110px;
+  }
+  p.mice_person{
+    padding:10px;
+  }
+  .mice_services, .mice_list{
+    padding:30px;
+   } 
+}
+@media (max-width: 380px) {
+  .alina, .alesya, .katya{
+    width: 85px;
+  }
+  p.mice_person{
+    padding:5px;
+  }
+}
+
+
+/* кнопочка двигающаяся */
+.view_all_tours{
+  margin:20px;
+}
+.view_all_countries{
+  margin:20px;
+}
+.learn_more{
+  position: relative;
+  display: block;
+  cursor: pointer;
+  outline: none;
+  border: 0;
+  text-decoration: none;
+  background: transparent;
+  padding: 0;
+  width: 192px;
+  height: auto;
+  margin:0 auto;
+  text-decoration: none;
+}
+.learn_more .circle {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: relative;
+  display: block;
+  margin: 0;
+  width: 48px;
+  height: 48px;
+  background: grey;
+  border-radius: 26px;
+}
+.circle .icon {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  background: #fff;
+}
+.learn_more .circle .icon.arrow {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  left:10px;
+  width:18px;
+  height: 2px;
+  background: none;
+}
+.learn_more .circle .icon.arrow::before {
+  position: absolute;
+  content: '';
+  top: -4px;
+  right: 1px;
+  width: 10px;
+  height: 10px;
+  border-top: 2px solid #fff;
+  border-right: 2px solid #fff;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.learn_more .button_text {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 12px 0;
+  margin: 0 0 0 29px;
+  color: #282936;
+  font-weight: 700;
+  line-height: 1.6;
+  text-align: center;
+  text-transform: uppercase;
+  
+}
+.learn_more:hover .circle {
+  width: 100%;
+}
+.learn_more:hover .circle .icon.arrow {
+  background: #fff;
+  -webkit-transform: translate(16px, 0);
+  transform: translate(16px, 0);
+}
+.learn_more:hover .button_text {
+  color: #fff;
+}
+a{
+    text-decoration: none;
+}
+/* все туры */
+.general_all {
+  max-width: 1000px;
+  margin: auto; 
+  padding: 20px;
+}
+
+.row {
+  margin: 10px -16px;
+}
+
+.row,
+.row > .column {
+  padding: 8px;
+}
+
+.column {
+  float: left;
+  width: 33.33%;
+  display: none; 
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.content {
+  padding: 10px;
+  box-shadow:1px 1px 5px black, 0 0 3px black;
+}
+
+.show {
+  display: block;
+}
+
+.btn {
+  border: none;
+  outline: none;
+  padding: 12px 16px;
+  background-color: white;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #ddd;
+}
+
+.btn.active {
+  background-color: #666;
+  color: white;
+}
+.news_images{
+  width:100%;
+  box-shadow:1px 1px 5px black, 0 0 3px black;
+  
+}
+
+.click_for_info{
+  color:#fff;
+    
+    text-align: center;
+    width: 130px;
+    background:transparent;
+    background: -webkit-gradient(linear, left top, left bottom, from(grey), color-stop(grey), to(grey));background: -o-linear-gradient(grey, grey, grey);background: linear-gradient(grey, grey, grey);
+    -moz-box-shadow: inset 0 0 7px rgba(0,0,0,0.5);
+    -webkit-box-shadow: inset 0 0 7px rgba(0,0,0,0.5);
+    -o-box-shadow: inset 0 0 7px rgba(0,0,0,0.5);
+    box-shadow: inset 0 0 7px rgba(0,0,0,0.5);
+    display: block;
+    text-decoration: none;
+    font-size: 20px;
+    text-shadow:black 1px 0 10px;
+    
+} 
+.click_for_info:before{
+    content: ".";
+    color:transparent;
+    line-height: 16px;
+    width: 100px;
+    margin-top: 0px;
+    margin-bottom: -17px;
+    margin-left: 7px;
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.9)), to(rgba(255, 255, 255, 0.1)) );
+    background: -o-linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.1) );
+    background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.1) );
+    display:block;
+    text-shadow:black 1px 0 10px;
+}
+.click_for_info:hover{
+  background: -webkit-gradient(linear, left top, left bottom, from(black), color-stop(black), to(grey));
+  background: -o-linear-gradient(black, black, grey);
+  background: linear-gradient(black, black, grey);
+}
+.click_for_info:focus{
+  outline:none;
+} 
+.click_for_info:active{
+  background-image: -webkit-linear-gradient(white, grey, white);
+}
+
+@media (max-width: 1100px) {
+  .column {
+    width: 50%;
+  }
+  
+  
+}
+@media (max-width: 780px) {
+  .column {
+    width: 100%;
+  }
+}
+
+/* адаптация  формы. Я ничего лучше не придумала, чем вот так менять размер у формы на каждой точке. Без бутсрапа никак не получалось сделать ее адаптивной. Она еще и ограничена высотой секции с картинкой. Ну или я чего-то просто не понимаю. Так что как-то так))*/
+@media (max-width: 990px) {
+  .master_tour{
+    padding:17px 17px;
+  }
+}
+@media (max-width: 920px) {
+  .pick_hotel{
+    padding-bottom:8px;
+  }
+  .country_tour{
+    width:180px;
+  }
+  .datepicker{
+    width:180px;
+  }
+  .choose{
+    width:118px;
+  }
+  .hotel_star{
+    margin:10px 0;
+  }
+  
+}
+@media (max-width: 880px) {
+
+  .master_tour{
+    padding-left:8px;
+  }
+  .pick_hotel{
+    padding-bottom:8px;
+  }
+  .country_tour{
+    width:166px;
+    height:24px;
+    margin-left:10px;
+  }
+  .datepicker{
+    width:166px;
+    height:24px;
+    margin-left:10px;
+  }
+  
+  .choose{
+    width:106px;
+    height:20px;
+    margin-left:10px;
+  }
+  .hotel_rating{
+    margin-left:10px;
+  }
+  .button_search{
+    width:120px;
+    margin-left:4px;
+  }
+  
+  
+}
+@media (max-width: 780px) {
+
+  .master_tour{
+    padding:12px;
+  }
+  
+  .country_tour{
+    width:160px;
+    height:24px;
+    margin-left:10px;
+  }
+  .datepicker{
+    width:160px;
+    height:24px;
+    margin-left:10px;
+  }
+  .btn-search{
+    width:93px;
+  }
+  .choose{
+    width:102px;
+    height:20px;
+    margin-left:10px;
+  }
+  .hotel_rating{
+    margin-left:10px;
+  }
+  .button_search{
+    width:100px;
+  }
+  
+}
+
+@media (max-width: 760px) {
+  .master_tour{
+    height:260px;
+    width:380px;
+  }
+   .country_tour{
+    width:160px;
+    height:22px;
+   
+  }
+  .hotel_star{
+    margin:5px 0 4px;
+   
+  }
+  .pick_hotel{
+    padding-bottom:14px;
+  }
+  .datepicker{
+    width:160px;
+    height:22px;
+    margin-left:10px;
+    
+  }
+  .choose{
+    width:102px;
+    height:22px;
+   
+  }
+  .btn-search{
+    height:30px;
+  }
+  .button_search{
+    padding-top:5px;
+    
+  }
+}
+@media (max-width: 640px) {
+  .hotel_rating{
+    display:flex;
+    justify-content: space-between;
+  }
+  .fa-star, .hotel_star{
+    padding-top:10px;
+  }
+  .hotel_star{
+    padding-top:5px;
+  }
+  .master_tour{
+    height:230px;
+    width:380px;
+  }
+  
+}
+
+@media (max-width: 580px) {
+
+  .master_tour{
+    height:210px;
+    width:380px;
+  }
+  .pick_hotel{
+    font-size:17px;
+    padding-bottom:10px;
+  }
+}
+@media (max-width: 540px) {
+
+  .master_tour{
+    height:200px;
+    width:380px;
+    padding:8px;
+  }
+  
+}
+@media (max-width: 510px) {
+
+  .master_tour{
+    height:176px;
+    width:380px;
+    padding:8px;
+  }
+  .country_tour{
+    width:160px;
+    height:20px;
+    margin-left:10px;
+  }
+  .datepicker{
+    width:160px;
+    height:20px;
+    margin-left:10px;
+  }
+  .btn-search{
+    width:93px;
+  }
+  .choose{
+    width:102px;
+    height:20px;
+    margin-left:10px;
+  }
+  .btn-search{
+    height:27px;
+    width:80px;
+  }
+  .food, .quantity, .date{
+    padding-top:5px;
+  }
+  
+}
+@media (max-width: 440px) {
+
+  .master_tour{
+    height:170px;
+    width:370px;
+    padding:8px;
+  }
+  .hotel_star{
+    padding:0;
+    margin:0;
+  }
+  .fa-star, .hotel_star{
+    padding-top:6px;
+  }
+  .button_search{
+    padding:0;
+  }
+   .country_tour{
+    width:160px;
+    height:20px;
+    margin-left:10px;
+  }
+  .datepicker{
+    width:160px;
+    height:20px;
+    margin-left:10px;
+  }
+  .btn-search{
+    width:93px;
+  }
+  .choose{
+    width:102px;
+    height:20px;
+    margin-left:10px;
+  }
+  
+}
+@media (max-width: 390px) {
+
+  .master_tour{
+    height:190px;
+    width:346px;
+    padding:8px;
+  }
+  .hotel_star{
+    padding:0;
+    margin:0;
+  }
+  .fa-star, .hotel_star{
+    padding-top:6px;
+    font-size: 15px;
+  }
+  .button_search{
+    padding:0;
+  }
+   .country_tour{
+    width:140px;
+    height:20px;
+    margin-left:10px;
+  }
+  .datepicker{
+    width:140px;
+    height:20px;
+    margin-left:10px;
+  }
+  .btn-search{
+    width:93px;
+  }
+  .choose{
+    width:88px;
+    height:20px;
+    margin-left:10px;
+  }
+  
+}
+@media (max-width: 360px) {
+
+  .master_tour{
+    height:190px;
+    width:332px;
+    padding:8px;
+  }
+  
+  .hotel_star{
+    font-size: 15px;
+    padding-top:5px;
+  }
+ 
+  .fa-star{
+    font-size: 13px;
+  }
+  .button_search{
+    padding:0;
+  }
+   .country_tour{
+    width:130px;
+    height:20px;
+    margin-left:10px;
+  }
+  .datepicker{
+    width:130px;
+    height:20px;
+    margin-left:10px;
+  }
+  .btn-search{
+    width:80px;
+  }
+  .choose{
+    width:82px;
+    height:20px;
+    margin-left:10px;
+  }
+}
+@media (max-width: 340px) {
+
+  .master_tour{
+    height:190px;
+    width:310px;
+    padding:5px;
+  }
+  .hotel_star{
+    font-size: 15px;
+    padding-top:5px;
+    display:none;
+  }
+ 
+  .fa-star{
+    font-size: 13px;
+    display:none;
+  }
+  
+}
+@media (max-width: 320px) {
+
+  .master_tour{
+    height:175px;
+    width:280px;
+    padding:5px;
+  }
+  .btn-search{
+    margin-top:10px;
+    margin-right:30px;
+  }
+  .country_tour{
+    width:120px;
+    height:20px;
+    margin-left:10px;
+  }
+  .datepicker{
+    width:120px;
+    height:20px;
+    margin-left:10px;
+  }
+  
+  .choose{
+    width:75px;
+    height:20px;
+    margin-left:10px;
+  }
+}
+
+
+  
+  
+  
+  
