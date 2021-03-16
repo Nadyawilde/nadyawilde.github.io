@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/slick.css" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <title>Все Туры</title>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <nav id="up">
+          <div class="menu_list">
+            <ul class="menu">
+              <li class="menu_item">
+                <a href="index.html" class="menu_link">Главная</a>
+              </li>
+              <li class="menu_item">
+                <a href="about_us.html" class="menu_link">О нас</a>
+              </li>
+              <li class="menu_item">
+                <a href="agency.html" class="menu_link">Агентсвам</a>
+              </li>
+              <li class="menu_item">
+                <a href="avia.html" class="menu_link">Авиа Билеты</a>
+              </li>
+              <li class="menu_item">
+                <a href="mice.html" class="menu_link">MICE</a>
+              </li>
+              <li class="menu_item">
+                <a href="alltours.html" class="menu_link">Все туры</a>
+              </li>
+              <li class="menu_item">
+                <a href="contacts.html" class="menu_link">Контакты</a>
+              </li>
+            </ul>
+          </div>
+          <div class="hamburger">
+            <i class="fas fa-bars"></i>
+          </div>
+        </nav>
+        <div class="subheader">
+          <div class="members"><img src="img/travmadeiata.png" alt="logo"></div>
+          <div class="main_logo"><img src="img/firstlogo.png" alt="logo"></div>
+          <div class="contacts">
+            <p>
+              <a class="phone_number" href="tel:+375172400123">+375 (17)2-400-123</a>
+            </p>
+            <p>
+              <a class="phone_number" href="tel:+375291757536"
+                >+375(29)1-75-75-36</a>
+            </p>
+            <div class="place_order">
+              <div class="hide_two">
+                <button class="trigger">Заказать звонок</button>
+              </div>
+              <div class="hide">
+                <a class="call_me_now" href="tel:+375291757536"><p class="call_now">Позвонить нам</p></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main>
+        <div class="general_all">
+          <div id="btnContainer">
+            <button class="btn active" onclick="filterSelection('all')">
+              Все Туры
+            </button>
+            <button class="btn" onclick="filterSelection('exclusive')">
+              Эксклюзив
+            </button>
+            <button class="btn" onclick="filterSelection('best')">
+              Лучшие Предложения
+            </button>
+            <button class="btn" onclick="filterSelection('booking')">
+              Раннее Бронирование
+            </button>
+          </div>
+          <div class="row">
+            <div class="column exclusive">
+              <div class="content">
+                <img
+                  class="news_images"
+                  src="img/alltours/dubai.jpg"
+                  alt="dubai"
+                />
+                <h4>Летим в ОАЭ!</h4>
+                <p class="info_tour">
+                  ОАЭ откроет въезд для туристов всех стран с 7 июля!Информация
+                  о полетной программе из Минска ожидается!
+                </p>
+                <button class="click_for_info">Подробнее</button>
+              </div>
+            </div>
+            <div class="column exclusive">
+              <div class="content">
+                <img
+                  class="news_images"
+                  src="img/alltours/mexica.jpg"
+                  alt="mexica"
+                />
+                <h4>Экскурсионный тур в Мексику.</h4>
+                <p class="info_tour">
+                  Мехико – Вильяэрмоса – Паленке - Кампече – Ушмаль – Мерида –
+                  Чичен-Ица – Канкун/Ривьера-Майя 6 дней / 5 ночей
+                </p>
+                <button class="click_for_info">Подробнее</button>
+              </div>
+            </div>
+            <div class="column exclusive">
+              <div class="content">
+                <img
+                  class="news_images"
+                  src="img/alltours/peru.jpg"
+                  alt="peru"
+                />
+                <h4>Открытие Латинской Америки: Перу.</h4>
+                <p class="info_tour">
+                  Большое путешествие с вылетом из Минска:самые знаковые и
+                  необычные места Перу.
+                </p>
+                <button class="click_for_info">Подробнее</button>
+              </div>
+            </div>
+
+            <div class="column best">
+              <div class="content">
+                <img
+                  class="news_images"
+                  src="img/alltours/maxxroyal.jpg"
+                  alt="Car"
+                />
+                <h4>Турция. Анталийcкое побережье.</h4>
+                <p class="info_tour">
+                  Вылеты - ежедневно за исключением понедельника и субботы.Летим
+                  с 02.09.20 на 8 дней/7 ночей
+                </p>
+                <button class="click_for_info">Подробнее</button>
+              </div>
+            </div>
+            <div class="column best">
+              <div class="content">
+                <img
+                  class="news_images"
+                  src="img/alltours/maldives.jpg"
+                  alt="Car"
+                />
+                <h4>Мальдивы. Лучшее Предложение!</h4>
+                <p class="info_tour">
+                  Отправляйтесь на несравненные Мальдивы и Вашему наслаждению не
+                  будет предела!На 8 дней/7 ночей.
+                </p>
+                <button class="click_for_info">Подробнее</button>
+              </div>
+            </div>
+            <div class="column best">
+              <div class="content">
+                <img
+                  class="news_images"
+                  src="img/alltours/istanbul.jpg"
+                  alt="Car"
+                />
+                <h4>
+                  Турция.Экскурсионный Тур: "По следам Роксоланы и Сулеймана".
+                </h4>
+                <p class="info_tour">
+                  На 4 дня/3 ночи.Вылеты ежедневно!Belavia или Turkish Airlines
+                </p>
+                <button class="click_for_info">Подробнее</button>
+              </div>
+            </div>
+
+            <div class="column booking">
+              <div class="content">
+                <img
+                  class="news_images"
+                  src="img/alltours/tunis.jpg"
+                  alt="Car"
+                />
+                <h4>
+                  Рады сообщить о возобновлении полетной программы в Тунис!
+                </h4>
+                <p class="info_tour">
+                  Ближайший вылет 22.08-30.08.2020 (9 дней/8 ночей)
+                </p>
+                <button class="click_for_info">Подробнее</button>
+              </div>
+            </div>
+            <div class="column booking">
+              <div class="content">
+                <img
+                  class="news_images"
+                  src="img/alltours/egypt.jpg"
+                  alt="Car"
+                />
+                <h4>Жаркий Египет в Сентябре</h4>
+                <p class="info_tour">
+                  Отправляйтесь в Египет и забудьте о пасмурных днях! Рейсы из
+                  Минска на 8 дней/ 7 ночей
+                </p>
+                <button class="click_for_info">Подробнее</button>
+              </div>
+            </div>
+            <div class="column booking">
+              <div class="content">
+                <img
+                  class="news_images"
+                  src="img/alltours/croatia.jpg"
+                  alt="Car"
+                />
+                <h4>Хорватия открыта!</h4>
+                <p class="info_tour">
+                  В Хорватии действует следующее Решение о въезде: необходим
+                  отрицательный тест ПЦР.
+                </p>
+                <button class="click_for_info">Подробнее</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="all_payment_info">
+          <div class="payment">
+            <div class="payment_methods">
+              <p class="footer_p">Способы Оплаты:</p>
+              <p class="footer_paragraphs">Наличные</p>
+              <p class="footer_paragraphs">Банковский карты</p>
+              <p class="footer_paragraphs">QR код</p>
+              <p class="footer_paragraphs">Безналичный расчет</p>
+              <p class="payment_icon">
+                <i class="fas fa-qrcode"></i>
+                <i class="fab fa-cc-visa"></i>
+                <i class="fab fa-cc-mastercard"></i>
+              </p>
+            </div>
+            <div class="social_media">
+              <p class="p_media">Мы в соцсетях:</p>
+              <p class="payment_icon">
+                <a
+                  href="https://www.instagram.com/sunnytravel.by/"
+                  target="_blank"
+                  ><i class="fab fa-instagram-square"></i
+                ></a>
+                <a
+                  href="https://www.facebook.com/SunnyTravelBelarus"
+                  target="_blank"
+                  ><i class="fab fa-facebook"></i
+                ></a>
+                <a href="https://t.me/sunnytravel_by" target="_blank"
+                  ><i class="fab fa-telegram-plane"></i
+                ></a>
+              </p>
+            </div>
+            <div class="searchbar">
+              <p class="footer_p">Поиск по сайту:</p>
+              <input type="text" placeholder="Поиск.." name="search" />
+              <button class="search"><i class="fa fa-search"></i></button>
+            </div>
+          </div>
+        </div>
+      </main>
+      <footer>
+        <div class="info">
+          <div class="footer_vat">
+            Sunny Travel <br>
+            220005 Беларусь <br>
+            УНН 100419886
+          </div>
+          <div class="footer_minsk">
+            Sunny Travel, Минск <br>
+            пр-т Независимости 36 <br>
+            Пн.-Пт. 09:00-18:00 <br>
+            Тел.:+375(17) 240-01-23,271-58-48 <br>
+            GSM: +375(29) 1-775-775, 1-506-812<br>
+            E-mail: office@sunnytravel.by
+          </div>
+          <div class="footer_brest">
+            Sunny Travel, Брест <br>
+            пр. Машерова, 52-10 <br>
+            Пн.-Пт. 09:00-18:00 <br>
+            Тел.: (0162) 53-86-24, 53-73-29 <br>
+            GSM:+375(44)5-738-624 <br>
+            E-mail: brest@sunnytravel.by
+          </div>
+        </div>
+        <a href="#up" class="pageup">
+          <i class="fas fa-arrow-circle-up"></i>
+        </a>
+      </footer>
+    </div>
+    <div class="modal">
+      <div class="modal-content">
+        <form class="form_order">
+          <span class="close-button">&times;</span>
+          <h4 class="order">
+            Отправьте Вашу заявку <br />
+            и наш менеджер свяжется с Вами
+          </h4>
+          <div class="form-group">
+            <label for="name_two">Имя:</label>
+            <div class="form form-name">
+              <input
+                type="text"
+                id="name_two"
+                name="name_two"
+                placeholder="Введите Ваше имя"
+              />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="number">Телефон:</label>
+            <div class="form form-number">
+              <input
+                type="number"
+                id="number"
+                name="number"
+                placeholder="Введите Ваш телефон"
+              />
+            </div>
+          </div>
+          <div class="button_order">
+            <button class="send" name="button">Отправить</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/modal.js"></script>
+    <script src="js/hamburger.js"></script>
+  </body>
+</html>

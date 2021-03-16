@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/slick.css">
+	<link rel="stylesheet" href="css/all.min.css">
+	<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+	<link rel="icon" href="img/favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" href="css/styles.css">
+	<title>Главная</title>
+</head>
+<body>
+	<div class="container">
+        <header>
+			<nav id="up">
+				<div class="menu_list">
+					<ul class="menu">
+						<li class="menu_item"><a href="about_us.html" class="menu_link">О нас</a></li>
+						<li class="menu_item"><a href="agency.html" class="menu_link">Агентсвам</a></li>
+						<li class="menu_item"><a href="avia.html" class="menu_link">Авиа Билеты</a></li>
+						<li class="menu_item"><a href="mice.html" class="menu_link">MICE</a></li>
+						<li class="menu_item"><a href="alltours.html" class="menu_link">Все туры</a></li>
+						<li class="menu_item"><a href="contacts.html" class="menu_link">Контакты</a></li>
+					</ul>
+				</div>
+				<div class="hamburger">
+					<i class="fas fa-bars"></i>
+				</div>
+			</nav>
+			
+			<div class="subheader">
+				<div class="members"> <img src="img/travmadeiata.png" alt="logo"></div>
+				<div class="main_logo"><img src="img/firstlogo.png" alt="logo"></div>
+				<div class="contacts"><p><a class="phone_number" href="tel:+375172400123">+375 (17)2-400-123</a></p> 	<p><a class="phone_number" href="tel:+375291757536">+375(29)1-75-75-36</a></p> 
+					<div class="place_order">
+						<div class="hide_two"><button class="trigger">Заказать звонок</button></div>
+						<div class="hide"><a class="call_me_now" href="tel:+375291757536"><p class="call_now">Позвонить нам</p></a></div>
+					</div>
+				</div>
+			</div>
+		</header> 
+        <main>
+			<section class="main_image">
+				<div class="beach_image"><img src="img/beach_gradient_map.jpg" alt="beachimage">
+					<div class="master_tour">
+						<h2 class="pick_hotel"> &mdash; Подбор Тура &mdash;</h2>
+                        <select class="country_tour">
+                            <option>Страна вылета</option>
+                            <option>Беларусь, Минск</option>
+                            <option>Россия, Москва</option>
+							<option>Украина, Киев</option>
+                          </select>
+                        <select class="country_tour">
+                            <option >Страна прилета</option>
+                            <option>Турция</option>
+                            <option>Греция</option>
+							<option>Италия</option>
+							<option>Египет</option>
+                            <option>Франция</option>
+							<option>Черногория</option>
+							<option>Хорватия</option>
+                            <option>ОАЭ</option>
+							<option>США</option>
+							<option>Мальдивы</option>
+                            <option>Таиланд</option>
+                            <option>Япония</option>
+                          </select>
+                          <div class="date">
+							<input class="datepicker" type="text" placeholder="Дата Вылета">
+							<input class="datepicker" type="text" placeholder="Дата Прилета">
+                          </div>
+            
+                          <div class="quantity">
+                          <select class="choose">
+                            <option>1 взрослый</option>
+                            <option>2 взрослых</option>
+                            <option>3 взрослых</option>
+                            <option>4 взрослых</option>
+                          </select>
+                          <select class="choose">
+                            <option >1 ребенок</option>
+                            <option>2 ребенка</option>
+                            <option>3 ребенка</option>
+                            <option>4 ребенка</option>
+						  </select>
+						  <select class="choose">
+							<option>Кол-во ночей</option>
+							<option>6</option>
+							<option>7</option>
+							<option>8</option>
+							<option>10</option>
+							<option>14</option>
+						  </select>
+                        </div>
+                          <div class="food">
+							  <select class="choose">
+								<option >Тип питания:</option>
+								<option>BB</option>
+								<option>HB</option>
+								<option>FB</option>
+								<option>AI</option>
+								<option>UAI</option>
+							  </select>
+							  <label class="check">Добавить перелет:</label>
+                            <input class="yes" type="checkbox" name="customer" value="yes" checked="checked"/>
+                          </div>
+						  <div class="hotel_rating"><p class="hotel_star">Категория Отеля:</p>
+							<div class="stars"><i class="fas fa-star" aria-hidden="true" id="s1"></i>
+							<i class="fas fa-star" aria-hidden="true" id="s2"></i>
+							<i class="fas fa-star" aria-hidden="true" id="s3"></i>
+							<i class="fas fa-star" aria-hidden="true" id="s4"></i>
+							<i class="fas fa-star" aria-hidden="true" id="s5"></i></div>
+							<div class="button_search">
+                            <button class="btn-search" type="button">Искать</button>
+                    		</div>   
+						  </div>        
+						</div>  
+				</div> 	
+			</section>
+			<section class="slider">
+				<div class="carousel__inner">
+					<div class="big_slider">
+						<img src="img/bigslider/croatia.jpg" alt="slide">
+						<div class="big_text">
+							<h3 class= "slider_h3"> &#10071; ХОРВАТИЯ ОТКРЫТА&#10071;</h3>
+							<p class="big_slider_p">НЕОБХОДИМ ОТРИЦАТЕЛЬНЫЙ ТЕСТ ПЦР!</p>
+						</div> 
+					</div>
+					<div class="big_slider">
+						<img src="img/bigslider/hard_rock.jpg" alt="slide">
+						<div class="big_text">
+							<h3 class= "slider_h3">HARD ROCK MALDIVES&#127775;</h3>
+							<p class="big_slider_p">СПЕЦИАЛЬОЕ ПРЕДЛОЖЕНИЕ!</p>
+						</div> 
+					</div>
+					<div class="big_slider">
+						<img src="img/bigslider/stambul_slider.jpg" alt="slide">
+						<div class="big_text">
+							<h3 class= "slider_h3">ЭКСКУРСИОННЫЙ ТУР В ТУРЦИЮ 	
+								&#128156;</h3>
+							<p class="big_slider_p">&laquo;ИСТОРИЯ ЛЮБВИ: ПО СЛЕДАМ РОКСОЛАНЫ И СУЛЕЙМАНА&raquo;</p>
+						</div> 
+					</div>
+				</div>
+			</section>
+			<section class="news">
+				<div class="carousel__second">
+						<div class="news_block">
+							<img src="img/tunis.jpg" alt="slide">
+							<div class="slider_text">
+								<h3 class= "slider_h3">ТУНИС ИЗ МИНСКА!</h3>
+								<p class="slider_descr">Возобновлении полетной программы в Тунис!</p>
+							</div> 
+						</div>
+						<div class="news_block">
+							<img src="img/egypt.jpg" alt="slide">
+							<div class="slider_text">
+								<h3 class= "slider_h3">Египет в Сентябре</h3>
+								<p class="slider_descr">Курорты Худгара и Шарм-эль-Шейх!</p>
+							</div> 
+						</div>
+						<div class="news_block">
+							<img src="img/etichad.jpg" alt="slide">
+							<div class="slider_text">
+								<h3 class= "slider_h3">Возобновление чартерной программы 16 Октября!</h3>
+								<p class="slider_descr">Минск-Абу-Даби</p>
+							</div> 
+						</div>
+						<div class="news_block">
+							<img src="img/regent.jpg" alt="slide">
+							<div class="slider_text">
+								<h3 class= "slider_h3">Черногория. Отдых в отелях класса люкс 2020</h3>
+								<p class="slider_descr">Regent Porto Montenegro </p>
+							</div> 
+						</div>
+						<div class="news_block">
+							<img src="img/belgrad.jpg" alt="slide">
+							<div class="slider_text">
+								<h3 class= "slider_h3">Экскурсионный тур в Белград</h3>
+								<p class="slider_descr">Очароварие яркого города</p>
+							</div> 
+						</div>
+						<div class="news_block">
+							<img src="img/dominicana.jpg" alt="slide">
+							<div class="slider_text">
+								<h3 class= "slider_h3">Доминикана открыла границы!</h3>
+								<p class="slider_descr">Новые правила карантина</p>
+							</div> 
+						</div>
+						<div class="news_block">
+							<img src="img/bali.jpg" alt="slide">
+							<div class="slider_text">
+								<h3 class= "slider_h3">Бали передумал открываться</h3>
+								<p class="slider_descr">Когда  путешествини смогут попасть на остров?</p>
+							</div> 
+						</div>
+				</div>
+			</section>
+			<div class="view_all_tours">
+				<div class="learn_more">
+					<span class="circle">
+					  <span class="icon arrow"></span>
+					</span>
+					<a href="alltours.html" class="button_text">Все Туры</a>
+				</div>
+			</div>
+			<div class="popular_countries">
+			<div class="gallery_countries">
+				<figure class="gallery_frame">
+				  <img class="gallery_img" src="img/greecegreece.jpg" alt="image" >
+				  <figcaption class="country">Греция</figcaption>
+				</figure>
+				<figure class="gallery_frame">
+				  <img class="gallery_img" src="img/turcia.jpg" alt="image" >
+				  <figcaption class="country">Турция</figcaption>
+				</figure>
+				<figure class="gallery_frame">
+				  <img class="gallery_img" src="img/arabem.jpeg" alt="image" >
+				  <figcaption class="country">ОАЭ</figcaption>
+				</figure>
+				<figure class="gallery_frame">
+				  <img class="gallery_img" src="img/monte.jpg" alt="image" >
+				  <figcaption class="country">Черногория</figcaption>
+				</figure>
+				<figure class="gallery_frame">
+				  <img class="gallery_img" src="img/egipet_covid.jpg" alt="image">
+				  <figcaption class="country">Египет</figcaption>
+				</figure>
+				<figure class="gallery_frame">
+				  <img class="gallery_img" src="img/maldives.jpeg" alt="image" >
+				  <figcaption class="country">Мальдивы</figcaption>
+				</figure>
+				<figure class="gallery_frame">
+				  <img class="gallery_img" src="img/tailand2.jpg" alt="image" >
+				  <figcaption class="country">Таиланд</figcaption>
+				</figure>
+				<figure class="gallery_frame">
+				  <img class="gallery_img" src="img/miami003_0.jpg" alt="image" >
+				  <figcaption class="country">Майами</figcaption>
+				</figure>
+				
+			  </div>
+			</div>
+			<div class="view_all_countries">
+				<div class="learn_more">
+					<span class="circle">
+					  <span class="icon arrow"></span>
+					</span>
+					<a href="allcountries.html" class="button_text">Все Страны</a>
+				  </div>
+				</div>
+			<div class="all_payment_info">
+				<div class="payment">
+					<div class="payment_methods"><p class="footer_p">Способы Оплаты:</p>
+					  <p class="footer_paragraphs"> Наличные</p> 
+					  <p class="footer_paragraphs">Банковский карты</p> 
+					  <p class="footer_paragraphs"> QR код</p> 
+					  <p class="footer_paragraphs">Безналичный расчет</p>
+					  <p class="payment_icon"> 
+						 	<i class="fas fa-qrcode"></i>
+						 	<i class="fab fa-cc-visa"></i>
+						 	<i class="fab fa-cc-mastercard"></i>
+						</p>
+					</div>
+					<div class="social_media"><p class="p_media">Мы в соцсетях:</p>
+						<p class="payment_icon"> 
+							<a href="https://www.instagram.com/sunnytravel.by/" target="_blank"><i class="fab fa-instagram-square"></i></a>
+							<a  href="https://www.facebook.com/SunnyTravelBelarus" target="_blank"><i class="fab fa-facebook"></i></a>
+							<a  href="https://t.me/sunnytravel_by" target="_blank"><i class="fab fa-telegram-plane"></i></a>
+						  </p>
+					  </div>	
+					  <div class="searchbar">	
+						<p class="footer_p">Поиск по сайту:</p>
+						<input type="text" placeholder="Поиск.." name="search">
+						<button class="search"><i class="fa fa-search"></i></button>
+					  </div>
+				</div>
+			</div>	
+		</main>
+        <footer>
+			<div class="info">
+                <div class="footer_vat">Sunny Travel <br>
+                    220005 Беларусь <br>
+                    УНН 100419886
+                </div>
+                <div class="footer_minsk">Sunny Travel, Минск <br>
+                    пр-т Независимости 36 <br>
+                    Пн.-Пт. 09:00-18:00 <br>
+                    Тел.:+375(17) 240-01-23,271-58-48 <br>
+                    GSM: +375(29) 1-775-775, 1-506-812<br>
+                    E-mail: office@sunnytravel.by
+                </div>  
+                <div class="footer_brest">Sunny Travel, Брест <br>
+                        пр. Машерова, 52-10 <br>
+                        Пн.-Пт. 09:00-18:00 <br>
+                        Тел.: (0162) 53-86-24, 53-73-29 <br>
+                        GSM:+375(44)5-738-624 <br>
+                        E-mail: brest@sunnytravel.by
+				</div> 
+				
+			</div>
+			<a href="#up" class="pageup">
+					<i class="fas fa-arrow-circle-up"></i>
+				</a> 
+		</footer>
+	</div>
+	<div class="modal">
+		<div class="modal-content">
+			<form class="form_order">
+			  <span class="close-button">&times;</span>
+			<h4 class="order">Отправьте Вашу заявку <br> и наш менеджер свяжется с Вами</h4>
+			  <div class="form-group">
+					  <label for="name_two">Имя:</label>
+						<div class="form form-name">
+						<input  type="text" id="name_two" name="name_two" placeholder="Введите Ваше имя"></div>
+			  </div>        
+			  <div class="form-group">
+					  <label for="number">Телефон:</label>
+						<div class="form form-number">
+						<input  type="number" id="number" name="number" placeholder="Введите Ваш телефон"></div>
+			  </div>
+				  <div class="button_order">
+					  <button class="send" name="button">Отправить</button>
+				 </div>
+					  
+		  </form>
+		</div>
+	</div>
+		
+	<script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+	<script src="js/slick.min.js"></script>
+	<script src="js/jquery.validate.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/modal.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script src="js/calendar.js"></script>
+	<script src="js/rus.js"></script>
+	<script src="js/hamburger.js"></script>
+	
+</body>
+</html>
